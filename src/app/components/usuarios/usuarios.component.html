@@ -1,0 +1,4 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let usuario of usuarios">
+    <a [routerLink]="['/usuario/'+usuario.$key]">{{ usuario.Nombre}} </a>
+</ul>

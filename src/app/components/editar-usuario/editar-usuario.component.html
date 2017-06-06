@@ -1,0 +1,27 @@
+<a [routerLink]="['/usuarios']">Usuarios</a>
+<br />
+<h2 class="page-header">Editar Usuario</h2>
+<form (submit)="onEditSubmit()">
+  <div class="form-group">
+    <label>Nombre</label>
+    <input class="form-control" type="text" [(ngModel)]="Nombre" name="Nombre" required>
+  </div>
+  <div class="form-group">
+    <label>Apellido</label>
+    <input class="form-control" type="text" [(ngModel)]="Apellido" name="Apellido" required>
+  </div>
+  <div class="form-group">
+    <label>Edad</label>
+    <input class="form-control" type="text" [(ngModel)]="Edad" name="Edad" required>
+  </div>
+  <div class="form-group">
+  <label>Genero</label>
+  <select class="form-control" type="text" [(ngModel)]="Genero" name="Genero" required>
+       <option value="Masculino">Masculino</option>
+       <option value="Femenino">Femenino</option>
+       <option value="Otros">Otros</option>
+     </select>
+   </div>
+
+  <input type="submit" value="ACEPTAR" class="btn btn-success">
+</form>

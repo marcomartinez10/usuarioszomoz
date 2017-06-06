@@ -1,0 +1,22 @@
+<div *ngIf="usuario">
+
+  <a [routerLink]="['/usuarios']"> Usuarios </a>
+  <br>
+  <h2 class="page-header">{{usuario.Nombre}} <small> {{usuario.Apellido}}</small></h2>
+
+  <div class="col-md-4">
+    <img style="width:100%" class="thumbnail" src="{{imageUrl}}">
+  </div>
+
+  <h5>Edad: {{usuario.Edad}}</h5>
+  <h5>Género: {{usuario.Genero}}</h5>
+
+
+
+
+
+  <div>
+    <a class="btn btn-default" [routerLink]="['/editar-usuario/'+usuario.$key]">Editar</a>
+    <a (click)="onDeleteClick()" class="btn btn-danger">Eliminar</a>
+  </div>
+</div>
